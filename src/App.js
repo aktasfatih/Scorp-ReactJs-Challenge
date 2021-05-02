@@ -3,6 +3,7 @@ import React from 'react';
 // import { Counter } from './features/counter/Counter';
 import NavigationBar from './components/navigation-bar/navigationBar.js'
 import ContentBody from './components/content-body'
+import Footer from './components/footer'
 import './App.css';
 import {
   BrowserRouter as Router
@@ -11,12 +12,17 @@ import {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header"> */}
         <Router>
           <NavigationBar />
-          <ContentBody />
+          <main class="Site-content">
+            <div classNAme="Site-content">
+              <ContentBody />
+            </div>
+          </main>
+          <Footer />
         </Router>
-      </header>
+      {/* </header> */}
     </div>
   );
 }

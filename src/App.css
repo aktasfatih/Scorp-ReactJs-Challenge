@@ -1,5 +1,9 @@
 .App {
   /* text-align: center; */
+  flex:1;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /* .App-logo {
@@ -35,5 +39,26 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+  background-color: brown;
+}
+
+.test{
+  flex: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
   }
 }
