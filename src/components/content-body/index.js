@@ -5,29 +5,51 @@ import {
 } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import {settitle} from '../../app/appSlicer';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
     const dispatch = useDispatch();
+	const { t, i18n } = useTranslation();
+
     useEffect(() => {
-        dispatch(settitle("Home"));
+        dispatch(settitle(t('menu.home')));
     });
-    return <h2>Home</h2>;
+    return (
+        <>
+            <h2>{t('menu.home')}</h2>
+            {t('pages.home')}
+        </>
+    );
 }
 
 function Link1() {
     const dispatch = useDispatch();
+	const { t, i18n } = useTranslation();
+
     useEffect(() => {
-        dispatch(settitle("Link1"));
+        dispatch(settitle(t('menu.about')));
     });
-    return <h2>About</h2>;
+    return (
+        <>
+            <h2>{t('menu.about')}</h2>
+            {t('pages.about')}
+        </>
+    );
 }
 
 function Link2() {
     const dispatch = useDispatch();
+	const { t, i18n } = useTranslation();
+
     useEffect(() => {
-        dispatch(settitle("Link2"));
+        dispatch(settitle(t('menu.mission')));
     });
-    return <h2>Users</h2>;
+    return (
+        <>
+            <h2>{t('menu.mission')}</h2>
+            {t('pages.mission')}
+        </>
+    );
 }
 
 export default function ContentBody(){

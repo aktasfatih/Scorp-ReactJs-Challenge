@@ -50,7 +50,8 @@
 
 .Site-content {
   flex: 1;
-  background-color: brown;
+  padding: 30px;
+  /* background-color: brown; */
 }
 
 .test{

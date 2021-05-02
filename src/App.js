@@ -15,8 +15,8 @@ function App() {
       {/* <header className="App-header"> */}
         <Router>
           <NavigationBar />
-          <main class="Site-content">
-            <div classNAme="Site-content">
+          <main className="Site-content">
+            <div className="Site-content">
               <ContentBody />
             </div>
           </main>
