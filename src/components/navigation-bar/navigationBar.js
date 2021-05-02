@@ -4,6 +4,13 @@ import { useSelector,
 	// useDispatch
 } from 'react-redux';
 import {selectLogState} from '../../app/loginSlicer'
+import {
+    Link
+} from "react-router-dom";
+
+function logoutAction(){
+	alert("Hey");
+}
 
 function LoginButton() {
 	const login = useSelector(selectLogState);
@@ -11,13 +18,13 @@ function LoginButton() {
 	if(login.status){
 		return (
 			<li>
-				<a href="#">Log out</a>
+				<a href="#" onClick={logoutAction}>Log out</a>
 			</li>
 		);
 	}else{
 		return (
 			<li>
-				<a href="#">Login</a>
+				<a href="#"  onClick={logoutAction}>Login</a>
 			</li>
 		);
 	}
@@ -32,13 +39,13 @@ export default function NavigationBar() {
 			</div>
 			<ul className="main-menu">
 				<li>
-					<a href="#">Sample Page</a>
+					<Link to="home">Sample Page</Link>
 				</li>
 				<li>
-					<a href="#">Link 1</a>
+					<Link to="link1">Link 1</Link>
 				</li>
 				<li>
-					<a href="#">Link 2</a>
+					<Link to="link2">Link 2</Link>
 				</li>
 				<LoginButton />
 			</ul>
