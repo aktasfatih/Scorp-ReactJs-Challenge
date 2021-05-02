@@ -1,32 +1,43 @@
-import React from 'react';
+import React, {useEffect } from 'react';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
-
+import { useSelector, useDispatch } from 'react-redux';
+import {settitle} from '../../app/appSlicer';
 
 function Home() {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(settitle("Home"));
+    });
     return <h2>Home</h2>;
-  }
-  
-  function About() {
+}
+
+function Link1() {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(settitle("Link1"));
+    });
     return <h2>About</h2>;
-  }
-  
-  function Users() {
+}
+
+function Link2() {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(settitle("Link2"));
+    });
     return <h2>Users</h2>;
-  }
+}
 
 export default function ContentBody(){
     return (
         <Switch>
             <Route path="/link2">
-                <About />
+                <Link2 />
             </Route>
             <Route path="/link1">
-                <Users />
+                <Link1 />
             </Route>
             <Route path="/">
                 <Home />
