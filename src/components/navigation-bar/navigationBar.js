@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { useSelector, useDispatch } from 'react-redux';
-import {selectLogState, loguserin, loguserout } from '../../app/loginSlicer'
+import {selectLogState, loguserin, loguserout, setvis} from '../../app/loginSlicer'
 import { Link } from "react-router-dom";
 import {selectAppState, setlang} from '../../app/appSlicer'
 import { useTranslation } from 'react-i18next';
@@ -16,7 +16,7 @@ function LoginButton() {
 	}else{
 		return (
 			<li>
-				<a href="#"  onClick={() => dispatch(loguserin())}>{t('menu.login')}</a>
+				<a href="#"  onClick={() => dispatch(setvis())}>{t('menu.login')}</a>
 			</li>
 		);
 	}
@@ -88,6 +88,9 @@ export default function NavigationBar() {
 				</li>
 				<li>
 					<Link to="link2">{t('menu.mission')}</Link>
+				</li>
+				<li>
+					<Link to="link3">{t('menu.contact')}</Link>
 				</li>
 				<UserNameButton />
 				<LoginButton />

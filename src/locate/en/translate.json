@@ -5,7 +5,8 @@
             "about" : "About",
             "mission": "Mission",
             "login": "Login",
-            "logout": "Log out"
+            "logout": "Log out",
+            "contact": "Contact"
         },
         "user": {
             "greet": "Hello, ",
@@ -15,6 +16,13 @@
             "home": "Cupidatat pariatur labore ea duis adipisicing ea quis ea eiusmod proident.",
             "about" : "Cillum nulla ipsum laboris dolore deserunt amet nulla exercitation excepteur id.",
             "mission": "Magna ex excepteur ad proident velit deserunt incididunt quis ut."
+        },
+        "login": {
+            "name": "Name",
+            "email": "Email",
+            "password": "Password",
+            "login": "Login",
+            "close": "Close"
         }
     }
 }

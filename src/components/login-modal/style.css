@@ -1,0 +1,26 @@
+.login-modal{
+    position: fixed;
+    height: 300px;
+    width:300px;
+    background-color: rgb(216, 216, 216);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: content-box;
+    padding-right: 30px;
+    left: 50%;
+    top:70px;
+    margin-left: -150px; /* Half of the width */
+}
+
+.login-modal input{
+    margin-bottom: 10px;
+    height: 2em;
+    padding-left: 1em;
+    width: 80%;
+}
+
+.hidden{
+    display: none;
+}

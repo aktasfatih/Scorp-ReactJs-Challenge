@@ -5,7 +5,8 @@
             "about" : "Hakkında",
             "mission": "Misyon",
             "login": "Üye Girişi",
-            "logout": "Çıkış Yap"
+            "logout": "Çıkış Yap",
+            "contact": "Iletisim"
         },
         "user": {
             "greet": "Merhaba, ",
@@ -15,6 +16,13 @@
             "home":  "Sit voluptate commodo ullamco ut aute aliquip ipsum consequat aute laboris occaecat.",
             "about" : "Cupidatat incididunt irure ad do.",
             "mission":"Magna enim officia sunt consectetur occaecat veniam commodo ad sunt aute."
+        },
+        "login": {
+            "name": "İsim",
+            "email": "Email",
+            "password": "Şifre",
+            "login": "Giriş Yap",
+            "close": "Kapat"
         }
     }
 }
