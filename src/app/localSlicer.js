@@ -1,16 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const localization = {
-    tr: {
-        footer_text: "Footer",
-        
-    },
-    eng: {
-
-    }
-}
 const initialState = {
-	localization = tr
+	localization: 'en',
 };
 
 export const localSlice = createSlice({
@@ -18,11 +9,11 @@ export const localSlice = createSlice({
 	initialState,
 	reducers: {
 		changelocalto: (state, action) => {
-			state.status = action.payload
+			state.status = action.payload;
 		},
-	}
+	},
 });
 
-export const selectLogState = state => state.login;
-export const {loguserin, loguserout, setusername} = loginSlice.actions;
-export default loginSlice.reducer;
+export const selectLogState = (state) => state.login;
+export const { loguserin, loguserout, setusername } = localSlice.actions;
+export default localSlice.reducer;

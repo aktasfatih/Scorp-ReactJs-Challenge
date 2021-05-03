@@ -1,58 +1,61 @@
 import React, { useState } from 'react';
 import './style.css';
 import { useSelector, useDispatch } from 'react-redux';
-import {selectLogState, loguserin, loguserout, setvis} from '../../app/loginSlicer'
-import { Link } from "react-router-dom";
-import {selectAppState, setlang} from '../../app/appSlicer'
+import { selectLogState, loguserout, setvis } from '../../app/loginSlicer';
+import { Link } from 'react-router-dom';
+import { selectAppState, setlang } from '../../app/appSlicer';
 import { useTranslation } from 'react-i18next';
 
 function LoginButton() {
 	const dispatch = useDispatch();
 	const login = useSelector(selectLogState);
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
-	if(login.status){
-		return null
-	}else{
+	if (login.status) {
+		return null;
+	} else {
 		return (
 			<li>
-				<a href="#"  onClick={() => dispatch(setvis())}>{t('menu.login')}</a>
+				<a href="#" onClick={() => dispatch(setvis())}>
+					{t('menu.login')}
+				</a>
 			</li>
 		);
 	}
 }
 
-function UserNameButton(){
+function UserNameButton() {
 	const login = useSelector(selectLogState);
 	const dispatch = useDispatch();
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 
-	if (login.status){
+	if (login.status) {
 		return (
 			<li>
 				<div className="greet-hover">
 					<a className="user-button">
-						{t('user.greet')}{login.username}
-					</a> 
+						{t('user.greet')}
+						{login.username}
+					</a>
 					<div className="dropdowncontent">
-						<div className="dropdown-item">
-							{login.email}
-						</div>
+						<div className="dropdown-item">{login.email}</div>
 						<div className="">
-							<a href="#" onClick={() => 	dispatch(loguserout())}>{t('menu.logout')}</a>
+							<a href="#" onClick={() => dispatch(loguserout())}>
+								{t('menu.logout')}
+							</a>
 						</div>
 					</div>
 				</div>
 			</li>
-		)
-	}else{
+		);
+	} else {
 		return null;
 	}
 }
 
 export default function NavigationBar() {
 	const app = useSelector(selectAppState);
-    const dispatch = useDispatch();
+	const dispatch = useDispatch();
 	const [visibleMenu, setVisibleMenu] = useState(true);
 
 	const { t, i18n } = useTranslation();
@@ -60,7 +63,7 @@ export default function NavigationBar() {
 	var handleChange = (e) => {
 		dispatch(setlang(e.target.value));
 		i18n.changeLanguage(e.target.value);
-	}
+	};
 
 	function handleClick(e) {
 		e.preventDefault();
@@ -72,14 +75,12 @@ export default function NavigationBar() {
 		<div className="navigation-bar">
 			<div className="first-floater">
 				<img className="logo" src="./logo512.png" />
-				<div className="current-page">
-					{app.title}
-				</div>
+				<div className="current-page">{app.title}</div>
 				<a href="#" className="hamburger" onClick={handleClick}>
 					<i className="fa fa-bars"></i>
 				</a>
 			</div>
-			<ul className={"main-menu " + (visibleMenu ? "" : "disp")}>
+			<ul className={'main-menu ' + (visibleMenu ? '' : 'disp')}>
 				<li>
 					<Link to="home">{t('menu.home')}</Link>
 				</li>
@@ -94,12 +95,16 @@ export default function NavigationBar() {
 				</li>
 				<UserNameButton />
 				<LoginButton />
-				<select onChange={handleChange} name="lang" id="lang" className="local-picker">
+				<select
+					onChange={handleChange}
+					name="lang"
+					id="lang"
+					className="local-picker"
+				>
 					<option value="en">English</option>
 					<option value="tr">Türkçe</option>
 				</select>
 			</ul>
-			
 		</div>
 	);
 }
