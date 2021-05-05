@@ -23,6 +23,9 @@
             "password": "Password",
             "login": "Login",
             "close": "Close"
+        },
+        "contact": {
+            "username": "Kullanıcı adı"
         }
     }
 }

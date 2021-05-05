@@ -23,6 +23,9 @@
             "password": "Şifre",
             "login": "Giriş Yap",
             "close": "Kapat"
+        },
+        "contact": {
+            "username": "Kullanıcı adı"
         }
     }
 }
