@@ -35,6 +35,16 @@
             "MISSING_EMAIL": "Email girmediniz.",
             "MISSING_NAME": "Isim girmediniz.",
             "MISSING_PASS": "Şifre girmediniz."
-        }
+        },
+        "countries": [
+            { "id": "TR", "name": "Türkiye" },
+            { "id": "US", "name": "Amerika" },
+            { "id": "GB", "name": "İngiltere" },
+            { "id": "DE", "name": "Almanya" },
+            { "id": "SE", "name": "İsviçre" },
+            { "id": "KE", "name": "Kenya" },
+            { "id": "BR", "name": "Brezilya" },
+            { "id": "ZW", "name": "Zimbabwe" }
+        ]
     }
 }

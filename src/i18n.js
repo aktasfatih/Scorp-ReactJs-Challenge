@@ -20,6 +20,7 @@ i18n.use(XHR)
 		/* debugger For Development environment */
 		debug: true,
 		ns: ['translations'],
+		returnObjects: true,
 		defaultNS: 'translations',
 		keySeparator: '.',
 		interpolation: {

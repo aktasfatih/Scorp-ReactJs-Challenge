@@ -22,17 +22,6 @@ export default function ContactPage() {
 		dispatch(settitle(t('menu.contact')));
 	});
 
-	const countryList = [
-		{ id: 'TR', name: 'Turkey' },
-		{ id: 'US', name: 'United States of America' },
-		{ id: 'GB', name: 'United Kingdom' },
-		{ id: 'DE', name: 'Germany' },
-		{ id: 'SE', name: 'Sweden' },
-		{ id: 'KE', name: 'Kenya' },
-		{ id: 'BR', name: 'Brazil' },
-		{ id: 'ZW', name: 'Zimbabwe' },
-	];
-
 	const handleSubmission = (e) => {
 		e.preventDefault();
 		console.log({
@@ -96,7 +85,7 @@ export default function ContactPage() {
 				<Autocomplete
 					required
 					id="combo-box-demo"
-					options={countryList}
+					options={t('countries')}
 					getOptionLabel={(option) => option.name}
 					style={{ width: 300 }}
 					onChange={(e, v) => setct(v)}
