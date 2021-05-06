@@ -109,9 +109,14 @@ ul.main-menu li a:hover {
 		float:none;
 	}
 	.hamburger{
-		float:right;
 		display: inline-block;
 	}
+    .local-picker.login{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
 	.navigation-bar{
 		height:auto;
 	}
@@ -139,5 +144,13 @@ ul.main-menu li a:hover {
 		height: 50px;
 		margin-bottom: 5px;
 	}
+
+    .local-picker.login{
+        position: relative;
+        right: 0px;
+        bottom: 0px;
+        margin-top: 10px;
+    }
+    
 
 }
