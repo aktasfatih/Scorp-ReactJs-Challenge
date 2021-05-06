@@ -35,7 +35,12 @@
             "MISSING_EMAIL": "Email girmediniz.",
             "MISSING_NAME": "Isim girmediniz.",
             "MISSING_PASS": "Şifre girmediniz.",
-            "MISSING_INPUT": "Mesaj kutusu boş."
+            "MISSING_INPUT": "Mesaj kutusu boş.",
+            "BADEMAIL":"Email adresiniz hatalı.",
+            "BADPHONE": "Telefon numarası hatalı.",
+            "BADNAME": "İsim minimum 3 karakter olmalıdır.",
+            "BADMESSAGE":"Lütfen bir mesaj giriniz.",
+            "BADFORM": "Lütfen formu doldurunuz"
         },
         "countries": [
             { "id": "TR", "name": "Türkiye" },

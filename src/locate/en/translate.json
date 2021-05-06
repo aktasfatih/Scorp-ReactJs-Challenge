@@ -35,7 +35,12 @@
             "MISSING_EMAIL": "Email is required.",
             "MISSING_NAME": "Name is required.",
             "MISSING_PASS": "Password is required.",
-            "MISSING_INPUT": "Message is empty."
+            "MISSING_INPUT": "Message is empty.",
+            "BADEMAIL":"Invalid email address",
+            "BADPHONE": "Invalid phone number",
+            "BADNAME": "Minimum name is 3 characters long",
+            "BADMESSAGE":"Please enter a message",
+            "BADFORM": "Please fill in the form"
         },
         "countries": [
             { "id": "TR", "name": "Turkey" },

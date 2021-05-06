@@ -59,23 +59,23 @@ export default function ContactPage() {
 				setemail(value);
 				tmpFormErrors.email = emailRegex.test(value)
 					? ''
-					: 'Invalid email address';
+					: t('alerts.BADEMAIL');
 				break;
 			case 'phone':
 				setphone(value);
 				tmpFormErrors.phone = phoneRegex.test(value)
 					? ''
-					: 'Invalid phone number';
+					: t('alerts.BADPHONE');
 				break;
 			case 'name':
 				setname(value);
 				tmpFormErrors.name =
-					value.length < 3 ? 'Minimum name is 3 characters long' : '';
+					value.length < 3 ? t('alerts.BADNAME') : '';
 				break;
 			case 'message':
 				settext(value);
 				tmpFormErrors.message =
-					value.length < 1 ? 'Please enter a message' : '';
+					value.length < 1 ? t('alerts.BADMESSAGE') : '';
 				break;
 			default:
 				break;
@@ -103,7 +103,7 @@ export default function ContactPage() {
 				}
 			}
 			if (tmpFormErrors == '') {
-				alert('Please fill in the form');
+				alert(t('alerts.BADFORM'));
 			} else {
 				alert(tmpFormErrors);
 				console.log("'" + tmpFormErrors + "'");
