@@ -9,7 +9,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 function App() {
 	return (
 		<div className="App">
-			<LoginModal />
 			<Router>
 				<NavigationBar />
 				<main className="Site-content">
@@ -19,6 +18,7 @@ function App() {
 				</main>
 				<Footer />
 			</Router>
+			<LoginModal />
 		</div>
 	);
 }

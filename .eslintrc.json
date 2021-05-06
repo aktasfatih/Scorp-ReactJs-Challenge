@@ -20,8 +20,9 @@
         "react"
     ],
     "rules": {
+        "no-unused-vars": "warn",
         "react/react-in-jsx-scope": "off",
-        "prettier/prettier": ["error", {
+        "prettier/prettier": ["warn", {
             "endOfLine":"auto",
             "tabWidth": 4,
             "singleQuote": true,

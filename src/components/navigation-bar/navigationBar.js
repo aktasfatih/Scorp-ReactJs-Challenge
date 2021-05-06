@@ -5,6 +5,7 @@ import { selectLogState, loguserout, setvis } from '../../app/loginSlicer';
 import { Link } from 'react-router-dom';
 import { selectAppState, setlang } from '../../app/appSlicer';
 import { useTranslation } from 'react-i18next';
+import LangOption from '../lang-option';
 
 function LoginButton() {
 	const dispatch = useDispatch();
@@ -55,15 +56,9 @@ function UserNameButton() {
 
 export default function NavigationBar() {
 	const app = useSelector(selectAppState);
-	const dispatch = useDispatch();
 	const [visibleMenu, setVisibleMenu] = useState(true);
 
-	const { t, i18n } = useTranslation();
-
-	var handleChange = (e) => {
-		dispatch(setlang(e.target.value));
-		i18n.changeLanguage(e.target.value);
-	};
+	const { t } = useTranslation();
 
 	function handleClick(e) {
 		e.preventDefault();
@@ -99,15 +94,7 @@ export default function NavigationBar() {
 				</li>
 				<UserNameButton />
 				<LoginButton />
-				<select
-					onChange={handleChange}
-					name="lang"
-					id="lang"
-					className="local-picker"
-				>
-					<option value="en">English</option>
-					<option value="tr">Türkçe</option>
-				</select>
+				<LangOption />
 			</ul>
 		</div>
 	);

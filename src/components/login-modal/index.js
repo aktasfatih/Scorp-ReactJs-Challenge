@@ -3,38 +3,78 @@ import './style.css';
 import { selectLogState, setvis, loguserin } from '../../app/loginSlicer';
 import { useSelector, useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import Modal from '@material-ui/core/Modal';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 export default function LoginModal() {
 	const login = useSelector(selectLogState);
 	const dispatch = useDispatch();
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+
 	const { t } = useTranslation();
 
 	const handleSubmission = () => {
-		dispatch(loguserin({ name, email }));
-		dispatch(setvis());
+		let errors = [];
+
+		if (!email) {
+			errors.push(t('alerts.MISSING_EMAIL'));
+		}
+		if (!name) {
+			errors.push(t('alerts.MISSING_NAME'));
+		}
+		if (!password) {
+			errors.push(t('alerts.MISSING_PASS'));
+		}
+		if (errors.length > 0) {
+			errors.unshift(t('alerts.ERRORS_TEXT') + '\r\n');
+			alert(errors.join(' \r\n'));
+		} else {
+			dispatch(loguserin({ name, email }));
+			dispatch(setvis());
+		}
 	};
 
 	return (
-		<div className={'login-modal ' + (login.visModal ? '' : 'hidden')}>
-			<h2>{t('login.login')}</h2>
-			<input
-				type="text"
-				placeholder={t('login.name')}
-				onChange={(e) => setName(e.target.value)}
-			/>
-			<input
-				type="text"
-				placeholder={t('login.email')}
-				onChange={(e) => setEmail(e.target.value)}
-			/>
-			<input type="password" placeholder={t('login.password')} />
-			<br />
-			<button onClick={handleSubmission}>{t('login.login')}</button>
-			<button onClick={() => dispatch(setvis())}>
-				{t('login.close')}
-			</button>
-		</div>
+		<Modal
+			open={login.visModal}
+			onClose={() => dispatch(setvis())}
+			aria-labelledby="simple-modal-title"
+			aria-describedby="simple-modal-description"
+		>
+			<div className="login-modal">
+				<form>
+					<h2>{t('login.login')}</h2>
+					<input
+						type="text"
+						placeholder={t('login.name')}
+						onChange={(e) => setName(e.target.value)}
+					/>
+					<input
+						type="text"
+						placeholder={t('login.email')}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					<input type="password" placeholder={t('login.password')} />
+					<br />
+					<Button
+						variant="contained"
+						color="primary"
+						onClick={handleSubmission}
+					>
+						{t('login.login')}
+					</Button>
+					<Button
+						variant="contained"
+						color="secondary"
+						onClick={() => dispatch(setvis())}
+					>
+						{t('login.close')}
+					</Button>
+				</form>
+			</div>
+		</Modal>
 	);
 }

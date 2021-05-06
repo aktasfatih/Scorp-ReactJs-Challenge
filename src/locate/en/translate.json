@@ -25,7 +25,13 @@
             "close": "Close"
         },
         "contact": {
-            "username": "Kullanıcı adı"
+            "username": "Username"
+        },
+        "alerts": {
+            "ERRORS_TEXT": "There are errors in the form:",
+            "MISSING_EMAIL": "Email is required.",
+            "MISSING_NAME": "Name is required.",
+            "MISSING_PASS": "Password is required."
         }
     }
 }
