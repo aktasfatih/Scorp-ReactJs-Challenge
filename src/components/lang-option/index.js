@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch } from 'react-redux';
-import { setlang } from '../../app/appSlicer';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectAppState, setlang } from '../../app/appSlicer';
 import PropTypes from 'prop-types'; // ES6
 
 LangOption.propTypes = {
@@ -10,6 +10,7 @@ LangOption.propTypes = {
 export default function LangOption(props) {
 	const dispatch = useDispatch();
 	const { t, i18n } = useTranslation();
+	const lang = useSelector(selectAppState).lang;
 
 	var handleChange = (e) => {
 		dispatch(setlang(e.target.value));
@@ -18,6 +19,7 @@ export default function LangOption(props) {
 
 	return (
 		<select
+			value={lang}
 			onChange={handleChange}
 			name="lang"
 			id="lang"

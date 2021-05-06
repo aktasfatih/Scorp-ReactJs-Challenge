@@ -48,6 +48,7 @@ export default function LoginModal() {
 			<div className="login-modal">
 				<form onSubmit={handleSubmission}>
 					<h2>{t('login.login')}</h2>
+
 					<input
 						type="text"
 						minLength="5"
@@ -76,8 +77,8 @@ export default function LoginModal() {
 					>
 						{t('login.close')}
 					</Button>
-					<LangOption className="test" />
 				</form>
+				<LangOption className="login" />
 				<br />
 			</div>
 		</Modal>

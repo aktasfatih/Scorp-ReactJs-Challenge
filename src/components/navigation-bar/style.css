@@ -62,6 +62,12 @@ ul.main-menu li a:hover {
 	margin-top: 10px;
 }
 
+.local-picker.login{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
 .greet-hover{
 	position: relative;
 	display: inline-block;
