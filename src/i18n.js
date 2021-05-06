@@ -18,7 +18,7 @@ i18n.use(XHR)
 		/* When react i18next not finding any language to as default in borwser */
 		fallbackLng: 'en',
 		/* debugger For Development environment */
-		debug: true,
+		debug: false,
 		ns: ['translations'],
 		returnObjects: true,
 		defaultNS: 'translations',
@@ -28,10 +28,11 @@ i18n.use(XHR)
 			formatSeparator: ',',
 		},
 		react: {
-			wait: true,
+			// wait: false,
 			bindI18n: 'languageChanged loaded',
 			bindStore: 'added removed',
 			nsMode: 'default',
+			useSuspense: true,
 		},
 	});
 
