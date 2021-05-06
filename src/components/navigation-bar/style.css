@@ -110,6 +110,7 @@ ul.main-menu li a:hover {
 	}
 	.hamburger{
 		display: inline-block;
+        float:right;
 	}
     .local-picker.login{
     position: absolute;
