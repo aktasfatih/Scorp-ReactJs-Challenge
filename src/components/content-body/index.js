@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { settitle } from '../../app/appSlicer';
 import { useTranslation } from 'react-i18next';
-import ContactPage from '../../pages/ContactPage';
+import ContactPage from '../../pages/content-contact/ContactPage';
 
 function Home() {
 	const dispatch = useDispatch();

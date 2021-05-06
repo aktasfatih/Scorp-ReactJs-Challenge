@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectLogState } from '../app/loginSlicer';
+import { selectLogState } from '../../app/loginSlicer';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { settitle } from '../app/appSlicer';
+import { settitle } from '../../app/appSlicer';
 import { useTranslation } from 'react-i18next';
 
 export default function ContactPage() {
