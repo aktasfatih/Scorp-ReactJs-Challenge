@@ -85,8 +85,7 @@ export default function ContactPage() {
 
 	const handleSubmission = (e) => {
 		e.preventDefault();
-		if (formValid({ formErrors, name, email, phone, text })) {
-			alert('valid');
+		if (formValid({ formErrors, name, email, phone, text, ct })) {
 			console.log({
 				name: login.username ? login.username : name,
 				email: login.email ? login.email : email,

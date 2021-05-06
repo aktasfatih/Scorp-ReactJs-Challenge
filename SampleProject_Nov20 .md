@@ -126,15 +126,15 @@ Should prefill and update `name` and `email` fields based on "User Info" from si
 -   [x] Email field
     -   [x] Please check if characters entered are valid and inform the user (e.g. red/green border)
         -   You can use a tool but html5
--   Phone number field
+-   [x] PPhone number field
     -   Please check if characters entered are valid and inform the user (e.g. red/green border)
     -   No need for a separate extension code selector.
     -   No need to format the text entered.
--   Country Selector with suggestion/search
+-   [x] Country Selector with suggestion/search
     -   Entering text should suggest possible countries to the user.
         -   This should be done without a server.
-    -   You can implement a basic search yourself or use a module/tool.
-    -   Country names should be localized. Search results should update if localization changes.
+    -   [x] PYou can implement a basic search yourself or use a module/tool.
+    -   [x] PCountry names should be localized. Search results should update if localization changes.
 -   Text field
     -   Can use a `textarea` element.
 -   Send button
