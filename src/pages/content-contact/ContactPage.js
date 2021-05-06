@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 const emailRegex = RegExp(
 	/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
+
 const phoneRegex = RegExp('^[0-9]{3}-?[0-9]{3}-?[0-9]{4}$');
 
 export default function ContactPage() {
@@ -26,11 +27,11 @@ export default function ContactPage() {
 		message: '',
 	});
 
-	const [name, setname] = useState(null);
-	const [email, setemail] = useState(null);
-	const [phone, setphone] = useState(null);
-	const [text, settext] = useState(null);
-	const [ct, setct] = useState(null);
+	const [name, setname] = useState('');
+	const [email, setemail] = useState('');
+	const [phone, setphone] = useState('');
+	const [text, settext] = useState('');
+	const [ct, setct] = useState('');
 
 	useEffect(() => {
 		dispatch(settitle(t('menu.contact')));
@@ -46,6 +47,9 @@ export default function ContactPage() {
 		// empty
 		Object.values(formErrors).forEach((val) => {
 			val.length > 0 && (valid = false);
+		});
+		Object.values(rest).forEach((val) => {
+			val.length == 0 && (valid = false);
 		});
 		return valid;
 	};
@@ -83,12 +87,14 @@ export default function ContactPage() {
 		setFormErrors(tmpFormErrors);
 	};
 
-	const handleSubmission = (e) => {
+	var handleSubmission = (e) => {
 		e.preventDefault();
-		if (formValid({ formErrors, name, email, phone, text, ct })) {
+		var tempname = login.username ? login.username : name;
+		var tempemail = login.email ? login.email : email;
+		if (formValid({ formErrors, tempname, tempemail, phone, text, ct })) {
 			console.log({
-				name: login.username ? login.username : name,
-				email: login.email ? login.email : email,
+				name: tempname,
+				email,
 				phone: phone,
 				country_code: ct.id,
 				text: text,
@@ -116,26 +122,24 @@ export default function ContactPage() {
 			<form onSubmit={handleSubmission}>
 				<TextField
 					disabled={login.username ? true : false}
-					{...(login.username ? { value: login.username } : null)}
+					value={login.username ? login.username : name}
 					style={{
 						marginTop: 10,
 					}}
 					error={formErrors.name.length > 0 ? true : false}
 					name="name"
-					label={t('login.name')}
-					defaultValue={login.username ? login.username : ''}
+					label={login.email ? '' : t('login.name')}
 					onChange={handleChange}
 				/>
 				<br />
 				<TextField
 					name="email"
 					disabled={login.email ? true : false}
-					{...(login.email ? { value: login.email } : null)}
+					value={login.email ? login.email : email}
 					error={formErrors.email.length > 0 ? true : false}
 					style={{ marginTop: 10 }}
-					label={t('login.email')}
+					label={login.email ? '' : t('login.email')}
 					type="text"
-					defaultValue={login.email ? login.email : ''}
 					onChange={handleChange}
 				/>
 				<br />
