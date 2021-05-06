@@ -84,13 +84,13 @@ export default function NavigationBar() {
 					<Link to="home">{t('menu.home')}</Link>
 				</li>
 				<li>
-					<Link to="link1">{t('menu.about')}</Link>
+					<Link to="About">{t('menu.about')}</Link>
 				</li>
 				<li>
-					<Link to="link2">{t('menu.mission')}</Link>
+					<Link to="Mission">{t('menu.mission')}</Link>
 				</li>
 				<li>
-					<Link to="link3">{t('menu.contact')}</Link>
+					<Link to="Contact">{t('menu.contact')}</Link>
 				</li>
 				<UserNameButton />
 				<LoginButton />

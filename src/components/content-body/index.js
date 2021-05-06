@@ -53,13 +53,13 @@ function Link2() {
 export default function ContentBody() {
 	return (
 		<Switch>
-			<Route path="/link2">
+			<Route path="/Mission">
 				<Link2 />
 			</Route>
-			<Route path="/link1">
+			<Route path="/About">
 				<Link1 />
 			</Route>
-			<Route path="/link3">
+			<Route path="/Contact">
 				<ContactPage />
 			</Route>
 			<Route path="/">
