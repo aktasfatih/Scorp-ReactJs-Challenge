@@ -166,6 +166,9 @@ export default function ContactPage() {
 					id="combo-box-demo"
 					options={t('countries')}
 					getOptionLabel={(option) => option.name}
+					getOptionSelected={(option, value) =>
+						option.name === value.name
+					}
 					style={{ width: 300 }}
 					onChange={(e, v) => setct(v)}
 					renderInput={(params) => (
