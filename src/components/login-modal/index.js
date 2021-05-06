@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import LangOption from '../lang-option';
 
 export default function LoginModal() {
 	const login = useSelector(selectLogState);
@@ -45,25 +46,27 @@ export default function LoginModal() {
 			aria-describedby="simple-modal-description"
 		>
 			<div className="login-modal">
-				<form>
+				<form onSubmit={handleSubmission}>
 					<h2>{t('login.login')}</h2>
 					<input
 						type="text"
+						minLength="5"
 						placeholder={t('login.name')}
 						onChange={(e) => setName(e.target.value)}
 					/>
 					<input
-						type="text"
+						type="email"
 						placeholder={t('login.email')}
 						onChange={(e) => setEmail(e.target.value)}
 					/>
-					<input type="password" placeholder={t('login.password')} />
+					<input
+						onChange={(e) => setPassword(e.target.value)}
+						type="password"
+						minLength="2"
+						placeholder={t('login.password')}
+					/>
 					<br />
-					<Button
-						variant="contained"
-						color="primary"
-						onClick={handleSubmission}
-					>
+					<Button variant="contained" color="primary" type="submit">
 						{t('login.login')}
 					</Button>
 					<Button
@@ -73,7 +76,9 @@ export default function LoginModal() {
 					>
 						{t('login.close')}
 					</Button>
+					<LangOption className="test" />
 				</form>
+				<br />
 			</div>
 		</Modal>
 	);

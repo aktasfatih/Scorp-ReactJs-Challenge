@@ -2,8 +2,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { setlang } from '../../app/appSlicer';
+import PropTypes from 'prop-types'; // ES6
 
-export default function LangOption() {
+LangOption.propTypes = {
+	className: PropTypes.string,
+};
+export default function LangOption(props) {
 	const dispatch = useDispatch();
 	const { t, i18n } = useTranslation();
 
@@ -17,7 +21,7 @@ export default function LangOption() {
 			onChange={handleChange}
 			name="lang"
 			id="lang"
-			className="local-picker"
+			className={'local-picker ' + props.className}
 		>
 			<option value="en">English</option>
 			<option value="tr">Türkçe</option>

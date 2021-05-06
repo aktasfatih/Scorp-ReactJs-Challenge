@@ -94,7 +94,7 @@ export default function NavigationBar() {
 				</li>
 				<UserNameButton />
 				<LoginButton />
-				<LangOption />
+				<LangOption className="nav" />
 			</ul>
 		</div>
 	);

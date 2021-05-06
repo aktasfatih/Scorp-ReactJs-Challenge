@@ -54,7 +54,10 @@ ul.main-menu li a:hover {
 	float:right;
 	height: 30px;
 	background-color: aliceblue;
-	display: inline-block;
+	
+}
+.local-picker.nav{
+    display: inline-block;
 	margin-right: 30px;
 	margin-top: 10px;
 }
