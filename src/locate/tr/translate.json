@@ -34,7 +34,8 @@
             "ERRORS_TEXT": "Form içinde hatalar var:",
             "MISSING_EMAIL": "Email girmediniz.",
             "MISSING_NAME": "Isim girmediniz.",
-            "MISSING_PASS": "Şifre girmediniz."
+            "MISSING_PASS": "Şifre girmediniz.",
+            "MISSING_INPUT": "Mesaj kutusu boş."
         },
         "countries": [
             { "id": "TR", "name": "Türkiye" },

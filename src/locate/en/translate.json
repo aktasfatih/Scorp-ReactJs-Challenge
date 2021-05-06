@@ -34,7 +34,8 @@
             "ERRORS_TEXT": "There are errors in the form:",
             "MISSING_EMAIL": "Email is required.",
             "MISSING_NAME": "Name is required.",
-            "MISSING_PASS": "Password is required."
+            "MISSING_PASS": "Password is required.",
+            "MISSING_INPUT": "Message is empty."
         },
         "countries": [
             { "id": "TR", "name": "Turkey" },

@@ -65,19 +65,19 @@ What to store:
 The navigation bar should be present on all pages.
 
 -   [x] Left side
-    -   Dummy icon
-        -   You can use your favourte icon pack.
-        -   You can also use a harcoded base64 image.
-    -   Current page name
-        -   Homepage should use the website name instead (e.g. Sample or Dummy)
+    -   [x] Dummy icon
+        -   [x] You can use your favourte icon pack.
+        -   [x] You can also use a harcoded base64 image.
+    -   [x] Current page name
+        -   [x] Homepage should use the website name instead (e.g. Sample or Dummy)
 -   [x] Right side
-    -   Links/Buttons to other pages.
-    -   Localization/Locale picker dropdown
-    -   Login button (only shown if no "User Info")
+    -   [x] Links/Buttons to other pages.
+    -   [x] Localization/Locale picker dropdown
+    -   [x] Login button (only shown if no "User Info")
         -   Opens "Login" modal
     -   [x] "User Name" button with dropdown or popover element (only shown if "User Info" exists)
-        -   Element will display email
-        -   Element will have "Logout" button
+        -   [x] Element will display email
+        -   [x] Element will have "Logout" button
 
 [x] Logout button deletes "User Info" from site-wide/global state. (No server interaction needed)
 [x] "Login" and "User Name" buttons should update based on site-wide/global state.
@@ -105,13 +105,13 @@ The navigation bar should be present on all pages.
 
 You don't need to have a backend or mock server. The only purpose of this component/modal/page is to trigger an update that will update all relevant parts of the website. (e.g. name shown on navigation bar should be updated when )
 
--   Title
--   Name field
--   Email field
--   Password field
--   Login button
--   Locale selector on one of the corners.
--   Close button (Optional)
+-   [x] Title
+-   [x] Name field
+-   [x] Email field
+-   [x] Password field
+-   [x] Login button
+-   [x] Locale selector on one of the corners.
+-   [x] Close button (Optional)
 
 You can have an exit button or only close the modal when the user presses the "Login" button.
 
@@ -121,10 +121,10 @@ When the user presses "Login" button, you should update the "User Info" stored i
 
 Should prefill and update `name` and `email` fields based on "User Info" from site-wide/global state (See Login Modal).
 
--   Title
--   Name field
--   Email field
-    -   Please check if characters entered are valid and inform the user (e.g. red/green border)
+-   [x] Title
+-   [x] Name field
+-   [x] Email field
+    -   [x] Please check if characters entered are valid and inform the user (e.g. red/green border)
         -   You can use a tool but html5
 -   Phone number field
     -   Please check if characters entered are valid and inform the user (e.g. red/green border)
