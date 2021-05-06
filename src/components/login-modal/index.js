@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import Modal from '@material-ui/core/Modal';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import LangOption from '../lang-option';
 
 export default function LoginModal() {

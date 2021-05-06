@@ -20,9 +20,12 @@
         "login": {
             "name": "İsim",
             "email": "Email",
+            "phone": "Telefon",
             "password": "Şifre",
             "login": "Giriş Yap",
-            "close": "Kapat"
+            "close": "Kapat",
+            "country": "Ülke",
+            "submit": "Gönder"
         },
         "contact": {
             "username": "Kullanıcı adı"

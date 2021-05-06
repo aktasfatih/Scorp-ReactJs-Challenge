@@ -20,9 +20,12 @@
         "login": {
             "name": "Name",
             "email": "Email",
+            "phone": "Phone",
             "password": "Password",
             "login": "Login",
-            "close": "Close"
+            "close": "Close",
+            "country": "Country",
+            "submit": "Submit"
         },
         "contact": {
             "username": "Username"

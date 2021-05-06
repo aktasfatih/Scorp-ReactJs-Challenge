@@ -9,7 +9,7 @@ LangOption.propTypes = {
 };
 export default function LangOption(props) {
 	const dispatch = useDispatch();
-	const { t, i18n } = useTranslation();
+	const { i18n } = useTranslation();
 	const lang = useSelector(selectAppState).lang;
 
 	var handleChange = (e) => {

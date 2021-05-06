@@ -3,7 +3,7 @@ import './style.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectLogState, loguserout, setvis } from '../../app/loginSlicer';
 import { Link } from 'react-router-dom';
-import { selectAppState, setlang } from '../../app/appSlicer';
+import { selectAppState } from '../../app/appSlicer';
 import { useTranslation } from 'react-i18next';
 import LangOption from '../lang-option';
 

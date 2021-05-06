@@ -10,11 +10,9 @@ export const appSlice = createSlice({
 	initialState,
 	reducers: {
 		settitle: (state, action) => {
-			console.log(action.payload);
 			state.title = action.payload;
 		},
 		setlang: (state, action) => {
-			console.log('L' + action.payload);
 			state.lang = action.payload;
 		},
 	},
