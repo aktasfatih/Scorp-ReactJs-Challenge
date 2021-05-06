@@ -38,7 +38,7 @@ export default function ContactPage() {
 	});
 
 	const formValid = ({ formErrors, ...rest }) => {
-		console.log({ formErrors, rest });
+		// console.log({ formErrors, rest });
 		let valid = true;
 		//form was filled
 		Object.values(rest).forEach((val) => {
