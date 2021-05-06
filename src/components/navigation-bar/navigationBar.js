@@ -77,7 +77,11 @@ export default function NavigationBar() {
 				<img className="logo" src="./logo512.png" />
 				<div className="current-page">{app.title}</div>
 				<a href="#" className="hamburger" onClick={handleClick}>
-					<i className="fa fa-bars"></i>
+					<i
+						className={
+							'fa ' + (visibleMenu ? 'fa-sort-asc' : 'fa-bars')
+						}
+					></i>
 				</a>
 			</div>
 			<ul className={'main-menu ' + (visibleMenu ? '' : 'disp')}>
